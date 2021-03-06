@@ -1,1 +1,1 @@
-# This is my config for the fusion-polybar
+# This is my dotfiles for i3
