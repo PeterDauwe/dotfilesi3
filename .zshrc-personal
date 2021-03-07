@@ -1,6 +1,0 @@
-
-
-
-(cat "$HOME/.cache/wal/sequences" &)
-
-alias gc="git clone"
