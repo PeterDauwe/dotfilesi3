@@ -12,5 +12,5 @@ alias configbup='cp -Rf ~/.config ~/config-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
 alias vbmessage='VBoxManage setextradata global GUI/SuppressMessages "all"'
 
-alias del='sudo pacman
+alias del='sudo pacman'
 
