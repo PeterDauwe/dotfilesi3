@@ -1,5 +1,6 @@
 #!/bin/bash
-
+FILES=$(git diff --cached --name-only)
+chmod 644 $FILES
 # checking if I have the latest files from github
 echo "Checking for newer files online first"
 git pull
@@ -8,7 +9,7 @@ echo "Deleting the work folder if one exists"
 [ -d work ] && rm -rf work
 
 # Below command will backup everything inside the project folder
-git add --chmod=+x --all .
+git add --all .
 
 # Give a comment to the commit if you want
 echo "####################################"
