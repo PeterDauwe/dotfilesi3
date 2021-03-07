@@ -15,7 +15,6 @@ set -e
 
 #software from Arch Linux repositories
 yay -Syu --noconfirm
-cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~/
 
 #sudo pacman -S --noconfirm --needed autorandr
 sudo pacman -S --noconfirm --needed youtube-dl
