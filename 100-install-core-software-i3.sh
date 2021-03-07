@@ -15,7 +15,7 @@ set -e
 
 #software from Arch Linux repositories
 yay -Syu --noconfirm
-cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~
+cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~/
 
 #sudo pacman -S --noconfirm --needed autorandr
 sudo pacman -S --noconfirm --needed youtube-dl
@@ -38,7 +38,7 @@ sudo rsync -rtv boot/ /boot/
 rsync -rtv Personali3/ ~/
 
 sudo systemctl enable sddm.service -f
-VBoxManage setextradata global GUI/SuppressMessages "all"
+
 echo '\''Sddm is active, all configs in place - reboot now'\'
 
 ###############################################################################################
