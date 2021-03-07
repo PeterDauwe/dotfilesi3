@@ -29,6 +29,9 @@ sudo pacman -S --noconfirm --needed python-ueberzug
 sudo pacman -S --noconfirm --needed sublime-text-dev
 sudo pacman -S --noconfirm --needed menulibre
 sudo pacman -S --noconfirm --needed sddm
+sudo pacman -S --noconfirm --needed meld
+sudo pacman -S --noconfirm --needed sublime-text-dev
+sudo pacman -S --noconfirm --needed atom
 
 
 sudo rsync -rtv etc/ /etc/
