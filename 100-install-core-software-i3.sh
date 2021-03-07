@@ -32,7 +32,9 @@ sudo pacman -S --noconfirm --needed sddm
 sudo pacman -S --noconfirm --needed meld
 sudo pacman -S --noconfirm --needed sublime-text-dev
 sudo pacman -S --noconfirm --needed atom
-
+sudo pacman -S --noconfirm --needed virtualbox
+sudo pacman -S --noconfirm --needed virtualbox-host-dkms
+sudo pacman -S --noconfirm --needed linux-headers
 
 sudo rsync -rtv etc/ /etc/
 sudo rsync -rtv usr/ /usr/
