@@ -32,6 +32,7 @@ sudo pacman -S --noconfirm --needed menulibre
 cp -Rf ~/.config ~/.config-original-$(date +%Y.%m.%d-%H.%M.%S)
 sudo rsync -rtv etc/ /etc/
 sudo rsync -rtv usr/ /usr/
+sudo rsync -rtv boot/ /boot/
 rsync -rtv Personali3/ ~/
 
 ###############################################################################################
