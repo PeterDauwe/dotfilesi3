@@ -39,6 +39,8 @@ sudo rsync -rtv usr/ /usr/
 sudo rsync -rtv boot/ /boot/
 rsync -rtv Personali3/ ~/
 
+sudo chsh $USER -s /bin/zsh
+
 sudo systemctl enable sddm.service -f
 
 echo '\''Sddm is active, all configs in place - reboot now'\'
