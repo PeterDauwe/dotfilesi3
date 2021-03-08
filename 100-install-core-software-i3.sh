@@ -35,6 +35,8 @@ sudo pacman -S --noconfirm --needed atom
 sudo pacman -S --noconfirm --needed virtualbox
 sudo pacman -S --noconfirm --needed virtualbox-host-dkms
 sudo pacman -S --noconfirm --needed linux-headers
+sudo pacman -S --noconfirm --needed discord
+sudo pacman -S --noconfirm --needed freetube-bin
 
 sudo rsync -rtv etc/ /etc/
 sudo rsync -rtv usr/ /usr/
