@@ -322,5 +322,5 @@ ex ()
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-#neofetch
+neofetch
 

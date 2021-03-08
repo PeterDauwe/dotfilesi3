@@ -3,7 +3,7 @@
 .SHIFT_LIST 10p
 ..
 .PARA_SPACE 1m
-.TITLE "\s+(10ArcoLinux Bobo Fusion!\s0"
+.TITLE "\s+(10ArcoLinux Adaptation!\s0"
 .AUTHOR "\s+5Peter Dauwe\s0"
 .DOCTYPE    DEFAULT
 .COPYSTYLE  FINAL
@@ -11,7 +11,7 @@
 .PT_SIZE 12
 .START
 Use the arrow keys (\f(CWUp/Down\fP) to navigate this document.
-\f(CWF11\fP to toggle fullscreen. \f(CWSuper+q\fP to quit. To zoom in or zoom out use the (\f(CW+/-\fP) keys.
+\f(CWF11\fP or \f(CWF5\fP to toggle fullscreen. \f(CWSuper+q\fP to quit. To zoom in or zoom out use the (\f(CW+/-\fP) keys.
 .LI
 .ITEM
 \f(CWF1\fP will show this document at any time.
@@ -20,31 +20,27 @@ Use the arrow keys (\f(CWUp/Down\fP) to navigate this document.
 .ITEM
 If we talk about \f(CWMod\fP that is the Super Key, best known as "the Windows Key."
 .LIST OFF
-.HEADING 2 "Why I created this system:"
+.HEADING 2 "The meaning of this document:"
 .LI
 .ITEM
 \fBTiling windows\fP \(en
-I like a tiling window manager so i used i3 as a base for this system.
+I like a tiling window manager so i used i3.
 .ITEM
-\fBUser-friendly\fP \(en
-A Linux/GNU distribution must be user-friendly but i3 is a not so easy for a beginner so i inserted the xfce-bar with the whiskermenu inside.
-Now, you can use the i3 keybindings or the xfce-menu.
+\fBPolybar\fP \(en
+I used polybar and most items are left-click to open.
+Start - Noobie extra's - MANPAGES and other stuff is for you to explore. 
 .ITEM
 \fBKeyboard\fP \(en
-All keybindings that were created by ArcoLinux are still here. Some extra were created. Most of them are explained in this document.
+Not all keybindings that were created by ArcoLinux are still here. Some were re-used. Most of them are explained in this document.
 .ITEM
-\fBSpin-Off\fP \(en
-This system is a spin-off from a Arcolinux-i3 distribution. ArcoLinux will not support this system. If you have questions , you can post them in the Arcolinux forum in the spin-off section.
+\fBAdaptation\fP \(en
+This system is a little adaptation and a simple use of how a script can change the whole lookout of a Arcolinux-i3 distribution. Nothing else is changed, so updates will not be a problem
 .LIST OFF
 .HEADING 1 "Key Bindings"
 I will not go over all the keybindings. These can be found in the \f(CW.config/i3/config\fP file.
-You can always adapt these to your liking. Learn the basic commands and you will start to enjoy this system.
+You can always change these to your liking. Learn the basic commands and you will start to enjoy this system.
 .HEADING 2 "Basic keybindings"
 .LI
-.ITEM
-\f(CWMod1+shift+l\fP \(en goto i3.
-.ITEM
-\f(CWMod1+shift+m\fP \(en goto fusion i3+xfce.
 .ITEM
 \f(CWControl+Mod1+t\fP \(en Opens a terminal.
 .ITEM
@@ -52,7 +48,7 @@ You can always adapt these to your liking. Learn the basic commands and you will
 .ITEM
 \f(CWMod+shift+d\fP \(en dmenu (For running programs without shortcuts)
 .ITEM
-\f(CWControl+Mod1+c\fP \(en Change the wallpaper
+\f(CWControl+Mod1+c\fP \(en Change the wallpaper and the border colors and the terminal colors.
 .ITEM
 \f(CWMod1+l\fP \(en Lock screen fast with random blurred wallpaper
 .ITEM
@@ -79,8 +75,6 @@ Additionally, you can use \f(CWyay,pacman\fP to install from the repos.
 \f(CWControl+Mod1+f\fP \(en Open Firefox
 .ITEM
 \f(CWControl+Mod1+p\fP \(en Open Pamac-manager
-.ITEM
-\f(CWControl+Mod1+y\fP \(en Open Mocp (a terminal Music player)
 .ITEM
 \f(CWF12\fP \(en Dropdown Terminal (hide with \f(CWF12\fP)
 .ITEM
