@@ -1,7 +1,7 @@
 #!/bin/bash
-FILES=$(git diff --cached --name-only)
+
 chmod -R 644 *.sh
-##$FILES
+
 # checking if I have the latest files from github
 echo "Checking for newer files online first"
 git pull
