@@ -1,4 +1,7 @@
 conky.config = {
+	
+	class_g = 'Conky',
+
 	background = true,
 	double_buffer = true,
 	no_buffers = true,
@@ -11,18 +14,16 @@ conky.config = {
 -- #	maximum_width = 1300,
 	border_inner_margin = 0,
 	border_outer_margin = 0,
-	draw_borders = false,
+	
 	override_utf8_locale = true,
 	use_xft = true,
 	font = 'UBUNTU Mono:Regular:size=14',
 	xftalpha = 1,
 	uppercase = false,
--- #	default_color = '#38333300',
+	default_color = white,
 	update_interval = 30,
 	
--- #	own_window = true,
--- #	own_window_type = 'override',
--- #	own_window_transparent = true,
+shadow = false,
 
 
     own_window = true,
@@ -41,7 +42,7 @@ conky.config = {
 
 
 
-
+	draw_borders = false,
 
  --# use_spacer = false,
  draw_shades = false,
@@ -51,9 +52,7 @@ conky.config = {
 
 
 
-
-
- imlib_cache_size = 0, 
+ imlib_cache_size = 0 ,
 
 };
 
