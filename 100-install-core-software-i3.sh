@@ -1,22 +1,15 @@
 #!/bin/bash
 set -e
 ##################################################################################################################
-# Author 	: Erik Dubois
-# Website : https://www.erikdubois.be
-# Website	: https://www.arcolinux.info
-# Website	:	./https://www.arcolinux.com
-# Website	:	https://www.arcolinuxd.com
-# Website	:	https://www.arcolinuxforum.com
-##################################################################################################################
-#
-#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
-#
+# Author 	: Peter Dauwe
 ##################################################################################################################
 
-#software from Arch Linux repositories
+#Part 1  - first update your system
 yay -Syu --noconfirm
+echo 'Your system is now updated.'
+##################################################################################################################
 
-#sudo pacman -S --noconfirm --needed autorandr
+#Part 2 - install needed pgms
 sudo pacman -S --noconfirm --needed youtube-dl
 sudo pacman -S --noconfirm --needed zathura
 sudo pacman -S --noconfirm --needed zathura-pdf-poppler
@@ -37,20 +30,54 @@ sudo pacman -S --noconfirm --needed virtualbox-host-dkms
 sudo pacman -S --noconfirm --needed linux-headers
 sudo pacman -S --noconfirm --needed discord
 yay -S --noconfirm --needed freetube-bin
+echo 'All the needed software is installed.'
+##################################################################################################################
 
-sudo rsync -rtv etc/ /etc/
-sudo rsync -rtv usr/ /usr/
-sudo rsync -rtv boot/ /boot/
-rsync -rtv Personali3/ ~/
-
-sudo chsh $USER -s /bin/zsh
-
+#Part 3 - Copy what needs to go to etc
+# Sddm.conf , just lines 8 and 9 are adapted
+# Enable Sddm
+sudo rsync -rtv Root/etc/ /etc/
 sudo systemctl enable sddm.service -f
 
-echo '\''Sddm is active, all configs in place - reboot now'\'
+##################################################################################################################
+
+#Part 4 - Copy what needs to go to usr
+# local/bin/ bobodmenu is needed for the MANPAGES , it is an custom made dmenu
+# share/backgrounds/noobie are added backgrounds
+# share/icons : candy-icons added , DiamondBlue cursor added , Default changed to DiamondBlue
+# share/oh-my-zsh : added a custom theme
+# share/sddm : added a theme with a custom background
+# share/themes : added some custom themes
+sudo rsync -rtv Root/usr/ /usr/
+
+
+##################################################################################################################
+
+#Part 5 - Copy what needs to go to grub
+# Just changed the background for grub 
+sudo rsync -rtv Root/boot/ /boot/
+
+##################################################################################################################
+
+#Part 6 - Custom config files
+# Added a .bashrc-personal
+# Added a .zsh-personal
+# Changed .face
+# Edit i3 and polybar.....
+# Found out for yourself
+rsync -rtv HomeDir/ ~/
+
+##################################################################################################################
+
+#Part 7 - change terminal from bash to zsh
+sudo chsh $USER -s /bin/zsh
+
+##################################################################################################################
+
+echo 'All is in place - please , reboot now'
 
 ###############################################################################################
 
 echo "################################################################"
-echo "################### core software installed"
+echo "############# Thank you for trying out this script #############"
 echo "################################################################"
