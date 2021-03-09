@@ -29,6 +29,7 @@ sudo pacman -S --noconfirm --needed virtualbox
 sudo pacman -S --noconfirm --needed virtualbox-host-dkms
 sudo pacman -S --noconfirm --needed linux-headers
 sudo pacman -S --noconfirm --needed discord
+sudo pacman -S --noconfirm --needed smplayer
 
 if yay -Qi freetube-bin &> /dev/null ; then 
       echo "Freetube is already installed"
