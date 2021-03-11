@@ -31,10 +31,10 @@ sudo pacman -S --noconfirm --needed linux-headers
 sudo pacman -S --noconfirm --needed discord
 sudo pacman -S --noconfirm --needed smplayer
 
-if yay -Qi freetube-bin &> /dev/null ; then 
+if yay -Qi freetube &> /dev/null ; then 
       echo "Freetube is already installed"
   else
-yay -S --noconfirm --needed freetube-bin
+yay -S --noconfirm --needed freetube
 fi
 
 echo 'All the needed software is installed.'
