@@ -1,6 +1,5 @@
 #!/bin/bash
 
-chmod -R 644 *.sh
 
 # checking if I have the latest files from github
 echo "Checking for newer files online first"
