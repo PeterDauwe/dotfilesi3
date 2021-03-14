@@ -45,6 +45,7 @@ echo 'All the needed software is installed.'
 # Enable Sddm
 
 sed -i "6s/.*/user="$USER"/g" Root/etc/sddm.conf
+sed -i "2s/.*/user="$USER"/g" Root/etc/sddm.conf.d/autologin.conf
 
 sudo rsync -rtv Root/etc/ /etc/
 sudo systemctl enable sddm.service -f
