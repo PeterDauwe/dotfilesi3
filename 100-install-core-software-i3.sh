@@ -45,6 +45,7 @@ echo 'All the needed software is installed.'
 # Enable Sddm
 
 sed -i "5s/.*/User="$USER"/g" Root/etc/sddm.conf
+#In case of a inlog problem
 #sed -i "2s/.*/User="$USER"/g" Root/etc/sddm.conf.d/autologin.conf
 
 sudo rsync -rtv Root/etc/ /etc/
