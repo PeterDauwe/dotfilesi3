@@ -1,4 +1,3 @@
-find . -iname "*.sh" -exec bash -c 'chmod +x "$0"' {} \;
 # This is my dotfiles for i3
 
 100-install-core-software-i3.sh
