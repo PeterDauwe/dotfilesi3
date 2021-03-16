@@ -32,6 +32,8 @@ sudo pacman -S --noconfirm --needed smplayer
 sudo pacman -S --noconfirm --needed alacritty
 sudo pacman -S --noconfirm --needed electron
 sudo pacman -S --noconfirm --needed simplescreenrecorder
+sudo pacman -S --noconfirm --needed qt5-graphicaleffects
+sudo pacman -S --noconfirm --needed qt5-quickcontrols2
 
 if yay -Qi freetube &> /dev/null ; then 
       echo "Freetube is already installed"
