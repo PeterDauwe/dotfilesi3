@@ -13,3 +13,5 @@ alias configbup='cp -Rf ~/.config ~/config-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 alias vbmessage='VBoxManage setextradata global GUI/SuppressMessages "all"'
 
 alias del='sudo pacman -R '
+
+alias scr='xdotool windowminimize $(xdotool getactivewindow) && scrot -d 3 -c ~/Pictures/Scrot-$(date +%Y.%m.%d-%H.%M.%S).jpg' 
