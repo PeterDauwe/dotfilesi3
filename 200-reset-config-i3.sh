@@ -10,7 +10,7 @@ set -e
 # Changed .face
 # Edit i3 and polybar.....
 # Found out for yourself
-sudo rsync -rtv HomeDir/ ~/
+rsync -rtv HomeDir/ ~/
 
 echo 'All is back in place'
 
