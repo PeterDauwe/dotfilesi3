@@ -12,10 +12,12 @@ case "$choice" in
 	   ;;
 	Random)
 	   pdf=$(find /usr/share/man/man1 -type f | shuf | head -1 )
+	   man -t $pdf | ps2pdf - - | zathura -
 	   ;;
 
     Search)
        pdf=$(man -k . | awk '{ print  $1 }' | bobodmenu  -i -c -l 30 -bw 2 -p 'Search manpages: ')
+       man -t $pdf | ps2pdf - - | zathura -
        ;;
 esac
-man -t $pdf | ps2pdf - - | zathura -
+
