@@ -11,17 +11,6 @@
 ;
 ;=====================================================
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-;; File Inclusion
-; include an external file, like module file, etc.
-
-;include-file = ~/.config/polybar/user_modules.ini
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-
-
 [global/wm]
 ;https://github.com/jaagr/polybar/wiki/Configuration#global-wm-settings
 margin-top = 0
@@ -40,7 +29,6 @@ compositing-border = over
 
 ; Define fallback values used by all module formats
 format-foreground = #FFCC66  
-;444;FF0000
 format-background = #444;
 format-underline =
 format-overline =
@@ -112,8 +100,8 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 ; Background gradient (vertical steps)
-;   background-[0-9]+ = #aarrggbb
-;background-0 =
+; background-[0-9]+ = #aarrggbb
+; background-0 =
 
 radius = 10
 line-size = 2
@@ -126,8 +114,8 @@ border-right-size = 15%
 ;border-color = ${colors.background}
 border-color = #00000000
 
-padding-left = 1
-padding-right = 1
+padding-left = 3%
+padding-right = 3%
 
 module-margin-left = 1
 module-margin-right = 1
@@ -142,10 +130,10 @@ font-3 = "Noto Sans Mono:size=10;0"
 font-4 = "Noto Sans:size=14;0"
 
 modules-left = i3 sept cpu-graph
-modules-center = google youtube freetube sept firefox explorer github gimp dis sept manpages
+modules-center = google youtube firefox explorer  gimp dis
 modules-right =  volume sept rofi sept memory4 sept filesystem sept arch-updates
 
-separator =  
+separator = 
 
 ;dim-value = 1.0
 
@@ -228,8 +216,8 @@ border-right-size = 15%
 ;border-bottom-size = 25
 border-color = #00000000
 
-padding-left = 0
-padding-right = 1
+padding-left = 3%
+padding-right = 3%
 
 module-margin-left = 3
 module-margin-right = 3
@@ -244,9 +232,9 @@ font-3 = "Noto Sans Mono:size=10;0"
 ;modules-center = networkspeeddown networkspeedup
 ;modules-right = filesystem
 
-modules-left = jgmenu arch-aur-updates wireless-network
+modules-left = jgmenu helpdoc arch-aur-updates wireless-network
 ;modules-center = kernel
-modules-right = arco_extra date pavolume
+modules-right = date pavolume battery
 
 
 separator = |
@@ -1418,7 +1406,7 @@ bar-empty = ─
 [module/battery]
 ;https://github.com/jaagr/polybar/wiki/Module:-battery
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = AC0
 full-at = 100
 
@@ -1729,16 +1717,23 @@ format-prefix-foreground = #0084FF
 [module/jgmenu]
 type = custom/script
 interval = 120
-exec = echo "   START"
-
-
-
-;click-left = "jgmenu_run >/dev/null 2>&1 &"
-
+exec = echo "APPFINDER"
 click-left = "xfce4-appfinder"
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+################################################################################
+
+[module/helpdoc]
+type = custom/script
+interval = 120
+exec = echo "  HELPDOC"
+;click-left = "jgmenu_run >/dev/null 2>&1 &"
+click-left = "~/.config/i3/scripts/readme.sh"
 format-foreground = ${colors.foreground}
 ;format-foreground = #ff0000
 format-background = ${colors.background}
+
 
 ################################################################################
 
@@ -1837,7 +1832,6 @@ format-background = ${colors.background}
 
 
 ################################################################################
-
 
 [module/memory4]
 type = internal/memory
@@ -2438,6 +2432,7 @@ click-left =  ~/.config/polybar/scripts/arcoextra
 click-middle = skippy-xd
 click-right = skippy-xd
 
+################################################################################
 
 [module/explorer]
 type = custom/text
@@ -2451,6 +2446,8 @@ content-background =  ${colors.background}
 click-left = thunar &
 click-right = killall thunar
 
+################################################################################
+
 [module/google]
 type = custom/text
 content = 
@@ -2461,6 +2458,7 @@ content-background =  ${colors.background}
 ;content-underline = ${colors.adapta-cyan}
 click-left = xdg-open https://www.google.com/ &
 
+################################################################################
 
 [module/github]
 type = custom/text
@@ -2472,6 +2470,7 @@ content-background =  ${colors.background}
 ;content-underline = ${colors.adapta-cyan}
 click-left = xdg-open https://www.github.com/ &
 
+################################################################################
 
 [module/youtube]
 type = custom/text
@@ -2484,7 +2483,7 @@ content-background =  ${colors.background}
 ;content-underline = ${colors.adapta-cyan}
 click-left = xdg-open https://www.youtube.com/ &
 
-
+################################################################################
 
 [module/freetube]
 type = custom/text
@@ -2497,9 +2496,7 @@ content-background =  ${colors.background}
 ;content-underline = ${colors.adapta-cyan}
 click-left = freetube &
 
-
-
-
+################################################################################
 
 [module/firefox]
 type = custom/text
@@ -2511,6 +2508,7 @@ content-background =  ${colors.background}
 ;content-underline = ${colors.adapta-cyan}
 click-left = firefox &
 
+################################################################################
 
 [module/gimp]
 type = custom/text
@@ -2523,11 +2521,10 @@ content-background =  ${colors.background}
 click-left = gimp &
 click-right = killall gimp
 
+################################################################################
 
 [module/dis]
 type = custom/text
-
-
 content =""
 content-padding = 1
 ;content-margin = 1
@@ -2537,6 +2534,7 @@ content-background =  ${colors.background}
 click-left = discord &
 click-right = killall Discord
 
+################################################################################
 
 [module/manpages]
 type = custom/text
@@ -2548,6 +2546,8 @@ content-background =  ${colors.background}
 ;content-underline = ${colors.adapta-cyan}
 click-left = ~/.config/i3/scripts/manpages.sh &
 ;click-right = killall Discord
+
+################################################################################
 
 [module/sept]
 type = custom/text
