@@ -10,24 +10,24 @@ echo 'Your system is now updated.'
 ##################################################################################################################
 
 #Part 2 - install needed pgms
-sudo pacman -S --noconfirm --needed youtube-dl
+#sudo pacman -S --noconfirm --needed youtube-dl
 sudo pacman -S --noconfirm --needed zathura
 sudo pacman -S --noconfirm --needed zathura-pdf-poppler
 sudo pacman -S --noconfirm --needed zathura-cb
 sudo pacman -S --noconfirm --needed zathura-djvu
-sudo pacman -S --noconfirm --needed vifm
+#sudo pacman -S --noconfirm --needed vifm
 sudo pacman -S --noconfirm --needed unclutter
 sudo pacman -S --noconfirm --needed python-pywal
-sudo pacman -S --noconfirm --needed python-ueberzug
+#sudo pacman -S --noconfirm --needed python-ueberzug
 sudo pacman -S --noconfirm --needed sublime-text-dev
-sudo pacman -S --noconfirm --needed menulibre
-sudo pacman -S --noconfirm --needed sddm
+#sudo pacman -S --noconfirm --needed menulibre
+#sudo pacman -S --noconfirm --needed sddm
 sudo pacman -S --noconfirm --needed meld
 sudo pacman -S --noconfirm --needed atom
-sudo pacman -S --noconfirm --needed virtualbox
-sudo pacman -S --noconfirm --needed virtualbox-host-dkms
-sudo pacman -S --noconfirm --needed linux-headers
-sudo pacman -S --noconfirm --needed discord
+#sudo pacman -S --noconfirm --needed virtualbox
+#sudo pacman -S --noconfirm --needed virtualbox-host-dkms
+#sudo pacman -S --noconfirm --needed linux-headers
+#sudo pacman -S --noconfirm --needed discord
 sudo pacman -S --noconfirm --needed smplayer
 sudo pacman -S --noconfirm --needed alacritty
 sudo pacman -S --noconfirm --needed electron
@@ -35,13 +35,13 @@ sudo pacman -S --noconfirm --needed simplescreenrecorder
 sudo pacman -S --noconfirm --needed qt5-graphicaleffects
 sudo pacman -S --noconfirm --needed qt5-quickcontrols2
 
-if yay -Qi freetube &> /dev/null ; then 
-      echo "Freetube is already installed"
-  else
-yay -S --noconfirm --needed freetube
-fi
+#if yay -Qi freetube &> /dev/null ; then 
+#      echo "Freetube is already installed"
+#  else
+#yay -S --noconfirm --needed freetube
+#fi
 
-echo 'All the needed software is installed.'
+#echo 'All the needed software is installed.'
 ##################################################################################################################
 
 #Part 3 - Copy what needs to go to etc
@@ -86,7 +86,7 @@ rsync -rtv HomeDir/ ~/
 ##################################################################################################################
 
 #Part 7 - change terminal from bash to zsh
-sudo chsh $USER -s /bin/zsh
+#sudo chsh $USER -s /bin/zsh
 
 ##################################################################################################################
 

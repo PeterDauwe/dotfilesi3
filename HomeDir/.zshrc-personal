@@ -4,12 +4,25 @@
 
 (cat "$HOME/.cache/wal/sequences" &)
 
+#git clone
 alias gc="git clone"
 
 alias gitpull="find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull"
 
 alias configbup='cp -Rf ~/.config ~/config-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
+gitpush() {
+    git pull
+    git add -u
+    git add --all .
+    input="update"
+    git commit -m "$input"
+    git push --force -u origin master
+}
+alias gp=gitpush
+
+
+#No messages in virtualbox
 alias vbmessage='VBoxManage setextradata global GUI/SuppressMessages "all"'
 
 alias del='sudo pacman -R '

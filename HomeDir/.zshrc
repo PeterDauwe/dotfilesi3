@@ -11,15 +11,17 @@ export ZSH=/usr/share/oh-my-zsh/
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
 ZSH_THEME="Lastbobo"
-
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
+
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# ZSH_THEME_RANDOM_IGNORED=(pygmalion tjkirch_mod)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -107,6 +109,11 @@ setopt GLOB_DOTS
 
 export HISTCONTROL=ignoreboth:erasedups
 
+# Make nano the default editor
+
+export EDITOR='nano'
+export VISUAL='nano'
+
 #PS1='[\u@\h \W]\$ '
 
 if [ -d "$HOME/.bin" ] ;
@@ -127,10 +134,10 @@ alias l.="ls -A | egrep '^\.'"
 #fix obvious typo's
 alias cd..='cd ..'
 alias pdw="pwd"
-alias udpate='sudo pacman -Syu'
-alias upate='sudo pacman -Syu'
-alias updte='sudo pacman -Syu'
-alias updqte='sudo pacman -Syu'
+alias udpate='sudo pacman -Syyu'
+alias upate='sudo pacman -Syyu'
+alias updte='sudo pacman -Syyu'
+alias updqte='sudo pacman -Syyu'
 alias upqll="yay -Syu --noconfirm"
 alias upal="yay -Syu --noconfirm"
 
@@ -167,7 +174,7 @@ alias merge="xrdb -merge ~/.Xresources"
 # Aliases for software managment
 # pacman or pm
 alias pacman='sudo pacman --color auto'
-alias update='sudo pacman -Syu'
+alias update='sudo pacman -Syyu'
 
 # yay as aur helper - updates everything
 alias pksyua="yay -Syu --noconfirm"
@@ -198,7 +205,7 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
 #switch between lightdm and sddm
-alias tolightdm="sudo pacman -S lightdm lightdm-gtk-greeter --noconfirm --needed ; sudo systemctl enable lightdm.service -f ; echo 'Lightm is active - reboot now'"
+alias tolightdm="sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed ; sudo systemctl enable lightdm.service -f ; echo 'Lightm is active - reboot now'"
 alias tosddm="sudo pacman -S sddm --noconfirm --needed ; sudo systemctl enable sddm.service -f ; echo 'Sddm is active - reboot now'"
 
 #quickly kill conkies
@@ -256,19 +263,26 @@ alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print $2}'"
 #Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
+#search content with ripgrep
+alias rg="rg --sort path"
+
 #get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
 #nano for important configuration files
 #know what you do in these files
-alias nlightdm="sudo nano /etc/lightdm/lightdm.conf"
-alias npacman="sudo nano /etc/pacman.conf"
-alias ngrub="sudo nano /etc/default/grub"
-alias nconfgrub="sudo nano /boot/grub/grub.cfg"
-alias nmkinitcpio="sudo nano /etc/mkinitcpio.conf"
-alias nmirrorlist="sudo nano /etc/pacman.d/mirrorlist"
-alias nsddm="sudo nano /etc/sddm.conf"
-alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
+alias nlightdm="sudo $EDITOR /etc/lightdm/lightdm.conf"
+alias npacman="sudo $EDITOR /etc/pacman.conf"
+alias ngrub="sudo $EDITOR /etc/default/grub"
+alias nconfgrub="sudo $EDITOR /boot/grub/grub.cfg"
+alias nmkinitcpio="sudo $EDITOR /etc/mkinitcpio.conf"
+alias nmirrorlist="sudo $EDITOR /etc/pacman.d/mirrorlist"
+alias nsddm="sudo $EDITOR /etc/sddm.conf"
+alias nfstab="sudo $EDITOR /etc/fstab"
+alias nnsswitch="sudo $EDITOR /etc/nsswitch.conf"
+alias nsamba="sudo $EDITOR /etc/samba/smb.conf"
+alias nb="$EDITOR ~/.bashrc"
+alias nz="$EDITOR ~/.zshrc"
 
 #gpg
 #verify signature for isos
@@ -290,6 +304,9 @@ alias probe="sudo -E hw-probe -all -upload"
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
+#update betterlockscreen images
+alias bls="betterlockscreen -u /usr/share/backgrounds/noobie/"
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
@@ -309,7 +326,7 @@ ex ()
       *.7z)        7z x $1      ;;
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   unzstd $1    ;;
+      *.tar.zst)   tar xf $1    ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
@@ -322,5 +339,18 @@ ex ()
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-neofetch
-
+# reporting tools - install when not installed
+# install neofetch
+sfetch
+# install screenfetch
+#screenfetch
+# install ufetch-git
+#ufetch
+# install ufetch-arco-git
+#ufetch-arco
+# install arcolinux-paleofetch-git
+#paleofetch
+# install alsi
+#alsi
+# install arcolinux-bin-git - standard on ArcoLinux isos (or sfetch - smaller)
+#hfetch
