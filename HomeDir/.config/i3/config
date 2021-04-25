@@ -589,8 +589,8 @@ bindsym control+mod1+s exec --no-startup-id discord;focus
 
 #ranger
 #bindsym control+mod1+n exec ~/.config/vifm/scripts/vifmrun &
-bindsym control+mod1+n exec alacritty -e ~/.config/vifm/scripts/vifmrun
-
+#bindsym control+mod1+n exec alacritty -e ~/.config/vifm/scripts/vifmrun
+bindsym control+mod1+n exec alacritty -e mc
 #bindsym control+mod1+n exec alacritty -e mc
 
 

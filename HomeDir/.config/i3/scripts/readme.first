@@ -3,7 +3,7 @@
 .SHIFT_LIST 10p
 ..
 .PARA_SPACE 1m
-.TITLE "\s+(10ArcoLinux Adaptation!\s0"
+.TITLE "\s+(10ArcoBobo -\s0 \s+5a spinoff from Arcolinux!\s0"
 .AUTHOR "\s+5Peter Dauwe\s0"
 .DOCTYPE    DEFAULT
 .COPYSTYLE  FINAL
@@ -24,17 +24,16 @@ If we talk about \f(CWMod\fP that is the Super Key, best known as "the Windows K
 .LI
 .ITEM
 \fBTiling windows\fP \(en
-I like a tiling window manager so i used i3.
+I like a tiling window manager so i use i3.
 .ITEM
 \fBPolybar\fP \(en
-I used polybar and most items are left-click to open.
-Start - Noobie extra's - MANPAGES and other stuff is for you to explore. 
+I used polybar and most items are left-click to open. Use and explore. 
 .ITEM
 \fBKeyboard\fP \(en
-Not all keybindings that were created by ArcoLinux are still here. Some were re-used. Most of them are explained in this document.
+Not all keybindings that were created by ArcoLinux are still here. Some were re-used. Most new-ones are explained in this document.
 .ITEM
 \fBAdaptation\fP \(en
-This system is a little adaptation and a simple use of how a script can change the whole lookout of a Arcolinux-i3 distribution. Nothing else is changed, so updates will not be a problem
+This system is a little adaptation and a simple use of how a script can change the whole lookout of an Arcolinux-i3 distribution.
 .LIST OFF
 .HEADING 1 "Key Bindings"
 I will not go over all the keybindings. These can be found in the \f(CW.config/i3/config\fP file.
@@ -64,13 +63,13 @@ You can always change these to your liking. Learn the basic commands and you wil
 .LIST OFF
 .HEADING 2 "Basic Programs"
 .PP
-This distribution installs many programs by default, and more made available through the Calamares installer. 
+This distribution installed many programs by default. 
 Additionally, you can use \f(CWyay,pacman\fP to install from the repos.
 .LI
 .ITEM
 \f(CWControl+Mod1+b\fP \(en Thunar (file browser/manager)
 .ITEM
-\f(CWControl+Mod1+n\fP \(en Open Vifm
+\f(CWControl+Mod1+n\fP \(en Open mc (Midnight Commander)
 .ITEM
 \f(CWControl+Mod1+f\fP \(en Open Firefox
 .ITEM
@@ -108,7 +107,7 @@ There are ten workspaces, indicated by polybar on the top or the xfce-bar on the
 .LIST OFF
 .HEADING 1 "Contact"
 .PP
-Hope you enjoy this distribution.
+Hope you enjoy this distribution. Arcolinux can not be held responsible in case of a problem with this adaptation. 
 .LI
 .ITEM
 .PDF_WWW_LINK "https://discordapp.com/invite/R2amEEz" "ArcoLinux Discord"
