@@ -19,7 +19,7 @@ sudo pacman -S --noconfirm --needed zathura-djvu
 sudo pacman -S --noconfirm --needed unclutter
 sudo pacman -S --noconfirm --needed python-pywal
 #sudo pacman -S --noconfirm --needed python-ueberzug
-sudo pacman -S --noconfirm --needed sublime-text-dev
+sudo pacman -S --noconfirm --needed sublime-text-4
 #sudo pacman -S --noconfirm --needed menulibre
 #sudo pacman -S --noconfirm --needed sddm
 sudo pacman -S --noconfirm --needed meld
